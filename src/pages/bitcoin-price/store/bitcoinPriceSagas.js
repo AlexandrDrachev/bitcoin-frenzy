@@ -2,7 +2,7 @@ import { take, call, put, select } from 'redux-saga/effects';
 
 import { increasePriceSaga, decreasePriceSaga } from './bitcoinPriceActions';
 import { updateHistoryOperationsSaga } from '../../../components/history-operations/store/historyOperationsActions';
-import { getTimestampFromDate } from "../../../services/utils";
+import { getTimestampFromDate } from '../../../services/utils';
 
 export function* increasePriceWatcher() {
   while (true) {

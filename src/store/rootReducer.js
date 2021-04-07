@@ -1,7 +1,6 @@
 import { appInitialState, appReducer } from '../pages/app/store/appReducer';
 
 const initialState = {
-  testRootReducer: 'rootReducer is ready!',
   appState: appInitialState,
 };
 

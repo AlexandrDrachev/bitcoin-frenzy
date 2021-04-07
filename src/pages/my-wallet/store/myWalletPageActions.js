@@ -1,15 +1,3 @@
-export const myWalletPageTestAction = () => {
-  return {
-    type: 'MY_WALLET_PAGE_TEST_ACTION',
-  };
-};
-
-export const myWalletPageTestSaga = () => {
-  return {
-    type: 'MY_WALLET_PAGE_TEST_SAGA',
-  };
-};
-
 export const depositAction = () => {
   return {
     type: 'DEPOSIT_ACTION',

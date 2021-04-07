@@ -1,20 +1,8 @@
 import {take, call, put, select} from 'redux-saga/effects';
 
-import { myWalletPageTestSaga } from './myWalletPageActions';
 import { getTimestampFromDate } from '../../../services/utils';
 import { depositSaga, withdrawSaga } from './myWalletPageActions';
 import { updateHistoryOperationsSaga } from '../../../components/history-operations/store/historyOperationsActions';
-
-export function* myWalletPageTestWatcher() {
-  while (true) {
-    yield take('MY_WALLET_PAGE_TEST_ACTION');
-    yield call(myWalletPageTestWorker);
-  }
-}
-
-function* myWalletPageTestWorker() {
-  yield put(myWalletPageTestSaga());
-}
 
 export function* depositWatcher() {
   while (true) {

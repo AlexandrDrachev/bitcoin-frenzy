@@ -9,6 +9,7 @@ export default class ServiceApi {
     })
       .then((res) => {
         return res;
-      });
+      })
+      .catch(err => console.log(err));
   };
 }

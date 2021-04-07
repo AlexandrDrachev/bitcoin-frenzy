@@ -1,18 +1,9 @@
 import { take, call, put } from 'redux-saga/effects';
 
-import { testAppStateSaga, getDataSaga } from './appActions';
+import { getDataSaga } from './appActions';
 import ServiceApi from '../../../services/serviceApi';
 
 const serviceApi = new ServiceApi();
-
-export function* appTestWatcher() {
-  yield take('TEST_APP_STATE_ACTION');
-  yield call(appTestWorker);
-}
-
-function* appTestWorker() {
-  yield put(testAppStateSaga());
-}
 
 export function* getDataWatcher() {
   while (true) {

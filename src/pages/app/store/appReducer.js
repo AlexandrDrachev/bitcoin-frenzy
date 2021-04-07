@@ -1,5 +1,4 @@
 export const appInitialState = {
-  testField: 'App State',
   loaded: false,
   data: {
     balance: null,
@@ -11,9 +10,6 @@ export const appInitialState = {
 
 export const appReducer = (state, action) => {
   switch (action.type) {
-    case 'TEST_APP_STATE_SAGA':
-      console.log('app test field: ', state.testField);
-      return state;
     case 'GET_DATA_SAGA':
       return {
         ...state,
@@ -45,8 +41,6 @@ export const appReducer = (state, action) => {
         }
       };
     case 'INCREASE_PRICE_SAGA':
-      console.log('newPrice: ', action.payload);
-      console.log('action: ', action);
       return {
         ...state,
         data: {
